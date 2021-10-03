@@ -79,8 +79,8 @@ function calculateWinner(idxMoveSquare, sizeOfBoard, squares) {
   }
 
   //check theo cheo trai tren - phai duoi
-  i = calculateRow(idxMoveSquare, sizeOfBoard) - calculateRow(idxMoveSquare - (sizeOfBoard + 1), sizeOfBoard) === 1? idxMoveSquare - (sizeOfBoard + 1) : -1;
-  j = calculateRow(idxMoveSquare - (sizeOfBoard + 1), sizeOfBoard) - calculateRow(idxMoveSquare, sizeOfBoard) === 1? idxMoveSquare + sizeOfBoard + 1 : sizeOfBoard * sizeOfBoard + 1;
+  i = (calculateRow(idxMoveSquare, sizeOfBoard) - calculateRow(idxMoveSquare - (sizeOfBoard + 1), sizeOfBoard) === 1)? idxMoveSquare - (sizeOfBoard + 1) : -1;
+  j = (calculateRow(idxMoveSquare - (sizeOfBoard + 1), sizeOfBoard) - calculateRow(idxMoveSquare, sizeOfBoard) === 1)? idxMoveSquare + sizeOfBoard + 1 : sizeOfBoard * sizeOfBoard + 1;
   count = 1;
   line = [];
   while (i >= 0 || j <= sizeOfBoard * sizeOfBoard) {
@@ -127,8 +127,8 @@ function calculateWinner(idxMoveSquare, sizeOfBoard, squares) {
   }
 
   //check theo cheo phai tren - trai duoi
-  i = calculateRow(idxMoveSquare, sizeOfBoard) - calculateRow(idxMoveSquare - (sizeOfBoard - 1), sizeOfBoard) === 1? idxMoveSquare - (sizeOfBoard - 1) : -1;
-  j = calculateRow(idxMoveSquare - (sizeOfBoard - 1), sizeOfBoard) - calculateRow(idxMoveSquare, sizeOfBoard) === 1? idxMoveSquare + sizeOfBoard - 1 : sizeOfBoard * sizeOfBoard + 1;
+  i = (calculateRow(idxMoveSquare, sizeOfBoard) - calculateRow(idxMoveSquare - (sizeOfBoard - 1), sizeOfBoard) === 1)? idxMoveSquare - (sizeOfBoard - 1) : -1;
+  j = (calculateRow(idxMoveSquare - (sizeOfBoard - 1), sizeOfBoard) - calculateRow(idxMoveSquare, sizeOfBoard) === 1)? idxMoveSquare + sizeOfBoard - 1 : sizeOfBoard * sizeOfBoard + 1;
   count = 1;
   line = [];
   while (i >= 0 || j <= sizeOfBoard * sizeOfBoard) {

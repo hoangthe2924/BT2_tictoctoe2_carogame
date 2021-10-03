@@ -1,6 +1,6 @@
 import Board from "./Board";
 import { calculateCol, calculateRow, calculateWinner } from "../rules";
-import "../index.css";
+import "./Game.css";
 import "../bootstrap.css"
 import { useState } from "react";
 
@@ -65,7 +65,7 @@ function Game() {
 
   function renderOptions() {
     return (
-      <label className="m-2">
+      <label className="mb-3">
         <div className="font-weight-bolder">Change size of board to: </div>
         <select className="custom-select m-1"
           value={sizeOfBoard}

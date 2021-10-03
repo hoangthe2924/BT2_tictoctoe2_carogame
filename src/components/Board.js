@@ -1,5 +1,5 @@
 import Square from "./Square";
-import "../index.css";
+import "./Board.css";
 
 function Board({ size, squares, winningLine, onClick }) {
   const sizeOfBoard = size;

@@ -1,4 +1,4 @@
-import "../index.css"
+import "./Square.css"
 
 function Square({value, highlight, onClick}) {
     const isHighlight = highlight;
