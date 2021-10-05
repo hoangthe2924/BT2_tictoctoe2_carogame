@@ -87,11 +87,7 @@ function calculateWinner(idxMoveSquare, sizeOfBoard, squares) {
     if (i >= 0 && squares[i] === player) {
       count++;
       line.push(i);
-      if (
-        calculateRow(i, sizeOfBoard) -
-          calculateRow(i - sizeOfBoard - 1, sizeOfBoard) ===
-        1
-      ) {
+      if (calculateRow(i, sizeOfBoard) - calculateRow(i - sizeOfBoard - 1, sizeOfBoard) === 1) {
         i -= sizeOfBoard + 1;
       } else {
         i = -1;
@@ -103,11 +99,7 @@ function calculateWinner(idxMoveSquare, sizeOfBoard, squares) {
     if (j <= sizeOfBoard * sizeOfBoard && squares[j] === player) {
       count++;
       line.push(j);
-      if (
-        calculateRow(j + sizeOfBoard + 1, sizeOfBoard) -
-          calculateRow(j, sizeOfBoard) ===
-        1
-      ) {
+      if (calculateRow(j + sizeOfBoard + 1, sizeOfBoard) - calculateRow(j, sizeOfBoard) === 1) {
         j += sizeOfBoard + 1;
       } else {
         j = sizeOfBoard * sizeOfBoard + 1;
@@ -135,11 +127,7 @@ function calculateWinner(idxMoveSquare, sizeOfBoard, squares) {
     if (i >= 0 && squares[i] === player) {
       count++;
       line.push(i);
-      if (
-        calculateRow(i, sizeOfBoard) -
-          calculateRow(i - sizeOfBoard + 1, sizeOfBoard) ===
-        1
-      ) {
+      if (calculateRow(i, sizeOfBoard) - calculateRow(i - sizeOfBoard + 1, sizeOfBoard) === 1) {
         i -= sizeOfBoard - 1;
       } else {
         i = -1;
@@ -150,11 +138,7 @@ function calculateWinner(idxMoveSquare, sizeOfBoard, squares) {
     if (j <= sizeOfBoard * sizeOfBoard && squares[j] === player) {
       count++;
       line.push(j);
-      if (
-        calculateRow(j + sizeOfBoard - 1, sizeOfBoard) -
-          calculateRow(j, sizeOfBoard) ===
-        1
-      ) {
+      if (calculateRow(j + sizeOfBoard - 1, sizeOfBoard) - calculateRow(j, sizeOfBoard) === 1) {
         j += sizeOfBoard - 1;
       } else {
         j = sizeOfBoard * sizeOfBoard + 1;
