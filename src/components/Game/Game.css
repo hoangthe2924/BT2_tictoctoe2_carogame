@@ -1,0 +1,21 @@
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.game-info {
+  margin-left: 30px;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+ol, ul {
+  padding-left: 23px;
+}
+
+.size-btn {
+  width: 260px;
+}
